@@ -348,5 +348,4 @@ include('layouts/header.php');
 <!-- link that opens popup -->
 <?php
 include('layouts/footer.php');
-
 ?>
