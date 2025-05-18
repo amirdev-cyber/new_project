@@ -67,7 +67,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-2">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="index.php">
                                     <img src="assets/img/logo.png" alt="">
                                 </a>
                             </div>
@@ -77,21 +77,21 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a class="active" href="index.php">uy</a></li>
-                                        <li><a href="Department.html">Department</a></li>
+                                        <li><a href="Department.php">Department</a></li>
                                         <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
+                                                <li><a href="news.php">news</a></li>
+                                              
                                             </ul>
                                         </li>
                                         <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                                <li><a href="about.html">about</a></li>
+                                                <li><a href="elements.php">elements</a></li>
+                                                <li><a href="about.php">about</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="Doctors.html">Doctors</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="Doctors.php">Doctors</a></li>
+                                        <li><a href="contact.php">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
