@@ -78,17 +78,11 @@
                                     <ul id="navigation">
                                         <li><a class="active" href="index.php">uy</a></li>
                                         <li><a href="Department.php">Department</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="news.php">news</a></li>
-                                              
-                                            </ul>
+                                        <li><a href="news.php">news </i></a>
+                                            
                                         </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.php">elements</a></li>
-                                                <li><a href="about.php">about</a></li>
-                                            </ul>
+                                        <li><a href="about.php">about </i></a>
+                                           
                                         </li>
                                         <li><a href="Doctors.php">Doctors</a></li>
                                         <li><a href="contact.php">Contact</a></li>
