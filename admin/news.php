@@ -1,4 +1,15 @@
-<?php  include('app/a_header.php')?>
+<?php
+include('doc_db.php');
+
+$docmed = "SELECT * FROM docmed";
+$respons=$conn->query($docmed);
+$conn->close()
+?>
+    
+
+<?php  include('app/a_header.php') 
+
+?>
       
 
                 <!-- Begin Page Content -->
@@ -39,16 +50,27 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                     
-                                    </tbody>
+                                       <?php foreach($respons as $item):?>
+         <tr>
+                <td><?=$item["name"]?></td>
+                <td><?=$item["position"]?></td>
+                <td><?=$item["office"]?></td>
+                <td><?=$item["age"]?></td>
+                <td><?=$item["start_date"]?></td>
+                <td class="action-buttons">
+                <form action="view.php" method=POST>
+                <input type="hidden" value="<?=$item["name"]?>" name="docmed" >
+                  <button title="View">View<i class="fas fa-eye"></i></button>
+                  <form action="delete.php" method=POST>
+                    <input type="hidden" value="<?=$item["name"]?>" name="docmed" >
+                  <button title="Delete">Delete<i class="fas fa-trash"></i></button>
+                  </form>
+                 
+                </td>
+              </tr> 
+        
+    
+        <?php endforeach; ?>
                                 </table>
                             </div>
                         </div>

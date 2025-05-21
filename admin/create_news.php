@@ -2,6 +2,23 @@
 
 
     ?>
+    <style>
+        .submit-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+    </style>
  
 
                 <!-- Begin Page Content -->
@@ -18,30 +35,33 @@
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary"> qo'shish</h6>
                         </div>
+                        <form action="control.php" method="POST">
                         <div class="card-body">
                             <div class="table-responsive">
                                 
                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">kim tomonidan</label>
-                                    <input type="text" name="author" class="form-control" id="exampleFormControlInput1" placeholder="">
+                                    <label for="name" class="form-label">kim tomonidan</label>
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">sarlavha</label>
-                                    <input type="text" name="subject" class="form-control" id="exampleFormControlInput1" placeholder="">
+                                    <label for="heading" class="form-label">sarlavha</label>
+                                    <input type="text" name="heading" class="form-control" id="heading" placeholder="">
                                 </div>
                               
                                 <div class="mb-3">
-                                    <label for="exampleFormControlTextarea1" class="form-label">malumot</label>
-                                     <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <label for="malumot" class="form-label">malumot</label>
+                                     <textarea class="form-control" name="name" id="name" rows="3"></textarea>
+                                </div>
+                                <d  iv class="mb-4">
+                                    <button type="submit" class="submit-btn">Yuborish</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+</form>
                 </div>
                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
 
-<?php  include('app/a_footer.php')  ?>
