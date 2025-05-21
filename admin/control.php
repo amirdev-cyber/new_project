@@ -1,5 +1,5 @@
 <?php
-include("doc_db")
+include("doc_db");
 $name=$_POST ['name'];
 
 $position =$_POST['position'];
