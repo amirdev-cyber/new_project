@@ -35,22 +35,22 @@
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary"> qo'shish</h6>
                         </div>
-                        <form action="control.php" method="POST">
+                        <form action="control2.php" method="POST">
                         <div class="card-body">
                             <div class="table-responsive">
                                 
                                <div class="mb-3">
-                                    <label for="name" class="form-label">kim tomonidan</label>
-                                    <input type="text" name="author" class="form-control" id="name" placeholder="">
+                                    <label for="name" class="form-label">rasm</label>
+                                    <input type="text" name="image" class="form-control" id="name" placeholder="">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="heading" class="form-label">sarlavha</label>
-                                    <input type="text" name="subject" class="form-control" id="heading" placeholder="">
+                                    <label for="heading" class="form-label">name</label>
+                                    <input type="text" name="name" class="form-control" id="heading" placeholder="">
                                 </div>
                               
                                 <div class="mb-3">
-                                    <label for="information" class="form-label">malumot</label>
-                                     <textarea class="form-control" name="information" id="information" rows="3"></textarea>
+                                    <label for="information" class="form-label">job</label>
+                                     <textarea class="form-control" name="j_type" id="information" rows="3"></textarea>
                                 </div>
                                 <d  iv class="mb-4">
                                     <button type="submit" class="submit-btn">Yuborish</button>
@@ -63,5 +63,3 @@
                 <!-- /.container-fluid -->
 
             </div>
-            <!-- End of Main Content -->
-

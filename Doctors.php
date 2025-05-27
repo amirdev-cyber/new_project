@@ -1,40 +1,14 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Docmed</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/gijgo.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/css/slicknav.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-</head>
-
-<body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
 <?php 
+include('admin/doc_db.php');
+
+$request="SELECT * FROM doctors";
+$doctors=$conn->query($request);
+$conn->close();
+
 include('layouts/header.php')
 ?>
+
+
 
     <!-- bradcam_area_start  -->
     <div class="bradcam_area breadcam_bg_2 bradcam_overlay">
@@ -55,94 +29,19 @@ include('layouts/header.php')
     <div class="expert_doctors_area doctor_page">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="single_expert mb-40">
-                        <div class="expert_thumb">
-                            <img src="assets/img/experts/1.png" alt="">
-                        </div>
-                        <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="single_expert mb-40">
-                        <div class="expert_thumb">
-                            <img src="assets/img/experts/2.png" alt="">
-                        </div>
-                        <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="single_expert mb-40">
-                        <div class="expert_thumb">
-                            <img src="assets/img/experts/3.png" alt="">
-                        </div>
-                        <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="single_expert mb-40">
-                        <div class="expert_thumb">
-                            <img src="assets/img/experts/4.png" alt="">
-                        </div>
-                        <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="single_expert mb-40">
-                        <div class="expert_thumb">
-                            <img src="assets/img/experts/6.png" alt="">
-                        </div>
-                        <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="single_expert mb-40">
-                        <div class="expert_thumb">
-                            <img src="assets/img/experts/7.png" alt="">
-                        </div>
-                        <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="single_expert mb-40">
-                        <div class="expert_thumb">
-                            <img src="assets/img/experts/8.png" alt="">
-                        </div>
-                        <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
-                        </div>
-                    </div>
-                </div>
+               <?php foreach($doctors as $doc):?>
                 <div class="col-md-6 col-lg-3">
                     <div class="single_expert mb-40">
                         <div class="expert_thumb">
                             <img src="assets/img/experts/9.png" alt="">
                         </div>
                         <div class="experts_name text-center">
-                            <h3>Mirazul Alom</h3>
-                            <span>Neurologist</span>
+                            <h3><?=$doc["name"] ?></h3>
+                            <span><?= $doc["j_type"]?></span>
                         </div>
                     </div>
                 </div>
+                <?php endforeach?>
             </div>
         </div>
     </div>

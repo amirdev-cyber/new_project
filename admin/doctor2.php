@@ -1,7 +1,7 @@
 <?php
 include('doc_db.php');
 
-$docmed = "SELECT * FROM docmedd ORDER BY id DESC ";
+$docmed = "SELECT * FROM doctors ORDER BY id DESC ";
 $respons=$conn->query($docmed);
 $conn->close()
 ?>
@@ -37,7 +37,7 @@ $conn->close()
                      <!-- end alert -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary"><a href="create_news.php">+ yangilik qo'shish</a></h6>
+                            <h6 class="m-0 font-weight-bold text-primary"><a href="create2.php">+ yangilik qo'shish</a></h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -45,8 +45,8 @@ $conn->close()
                                     <thead>
                                         <tr>
                                             <th>image</th>
-                                            <th>Author</th>
-                                            <th>subject</th>
+                                            <th>Name</th>
+                                            <th>Job</th>
                                       
                              
                                         </tr>
@@ -56,17 +56,17 @@ $conn->close()
                                        <?php foreach($respons as $item):?>
          <tr>
                 <td><?=$item["image"]?></td>
-                <td><?=$item["author"]?></td>
-                <td><?=$item["subject"]?></td>
+                <td><?=$item["name"]?></td>
+                <td><?=$item["j_type"]?></td>
  
                
                 <td class="action-buttons">
-                <form action="edit.php" method=POST>
-                <input type="hidden" value="<?=$item["id"]?>" name="docmed" >
+                <form action="edit2.php" method=POST>
+                <input type="hidden" value="<?=$item['id']?>" name="doc_id" >
                   <button title="edit">edit<i class="fas fa-eye"></i></button>
                 </form>
-                  <form action="delet.php" method=POST>
-                    <input type="hidden" value="<?=$item['id']?>" name="docmed1" >
+                  <form action="delete2.php" method=POST>
+                    <input type="hidden" value="<?=$item['id']?>" name="docmed3" >
                   <button title="Delete">Delete<i class="fas fa-trash"></i></button>
                   </form>
                  
@@ -85,7 +85,7 @@ $conn->close()
 
             </div>
             <!-- End of Main Content -->
-
+<?php
+include('app/a_footer.php')
+?>
           
-
-         <?php  include('app/a_footer.php')?>

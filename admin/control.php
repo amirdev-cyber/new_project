@@ -1,23 +1,20 @@
 <?php
-include("doc_db");
-$name=$_POST ['name'];
-
-$position =$_POST['position'];
-$office =$_POST['office'];
-$age =$_POST['age'];
-$start =$_POST['start_date'];
-$salary =$_POST['salary'];
-
-$create = "INSERT INTO docmed(name,position,office,age,start_date,salary)
-VALUES ('$name','$position ','$office','$age','$start','$salary')";
-
-if($conn->query($create) === TRUE){
-   echo "malumotlar qo'shildi";
-}
-else{
-    echo "Error".$create."<br>".$conn->error;
+include("doc_db.php");
+$information =$_POST['information'];
+$author=$_POST['author'];
+$subject=$_POST['subject'];
+$image="1.jpg";
+$news="INSERT INTO  docmedd(image,author, subject, news_body )
+VALUES('$image' , '$author' , '$subject'  , '$information')";
+$message;
+$error;
+if ($conn->query($news) === TRUE) {
+  $message="New record created successfully";
+} else {
+  $error= "Error: " . $news . "<br>" . $conn->error;
 }
 $conn->close();
 
+header("location:news.php? message=$message && error=$error");
 
 ?>
